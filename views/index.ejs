@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>surakSA</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css"
+      type="text/css"
+    />
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+
+    <!-- Add a reference to the Azure Maps Services Module JavaScript file. -->
+    <script src="https://atlas.microsoft.com/sdk/javascript/service/2/atlas-service.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/azmap.css" /> -->
+  </head>
+  <body onload="GetMap()">
+    <div id="myMap"></div>
+    <div id="search_bar">
+      <form>
+        <!-- <input type="text" placeholder="Search for places" /> -->
+        <div id="logo">
+          <img
+            class="img"
+            src="https://img.icons8.com/offices/40/000000/menu.png"
+          />
+          <h3>
+            <a href="/"
+              >surakSA <img class="img_logo" src="img/logo.png" alt="logo"
+            /></a>
+          </h3>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <div id="nav-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/profile">Profile</a></li>
+              <li><a href="/">Ask For Help!</a></li>
+              <li><a href="/">Contact</a></li>
+              <li><a href="/">SOS</a></li>
+              <li><a href="/">Logout</a></li>
+            </div>
+          </ul>
+        </nav>
+      </form>
+    </div>
+    <div id="search">
+      <div class="search-input-box">
+        <div class="search-input-group">
+          <div class="search-icon" type="button"></div>
+          <input id="search-input" type="text" placeholder="Search" />
+        </div>
+      </div>
+      <ul id="results-panel"></ul>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/azmap.js"></script>
+  </body>
+</html>
