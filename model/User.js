@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const Userschema = new mongoose.Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+    },
     googleId: {
         type: String,
         required: true
@@ -23,6 +27,12 @@ const Userschema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    email:{
+        type:String,
+    },
+    phone:{
+        type:String
     }
 })
 

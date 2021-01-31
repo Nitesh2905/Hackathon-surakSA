@@ -42,26 +42,29 @@
   </head>
   <body onload="GetMap()">
     <div id="myMap"></div>
-    <div
-      style="
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        background-color: white;
-        padding: 10px;
-        border-radius: 10px;
-      "
-    >
+    <div class="geomarks">
       <input
-        type="button"
-        value="Turn on Your location"
+        type="image"
+        src="./img/geotag.webp"
+        width="50"
+        height="45"
+        class="geoMark1"
+        value=""
         onclick="startTracking()"
       />
-      <!-- <i class="fas fa-map-marker" onclick="startTracking()"></i> -->
+      <!-- <i
+        class="fas fa-map-marker"
+        style="height: 25px"
+        onclick="startTracking()"
+      ></i> -->
       <input
-        type="button"
-        value="Turn off your location"
+        type="image"
+        value=""
         onclick="stopTracking()"
+        src="./img/turnoff-location-780739.png"
+        width="40"
+        height="40"
+        class="geoMark2"
       />
     </div>
 
@@ -92,7 +95,7 @@
               <li><a href="/profile">Profile</a></li>
               <li><a href="/">Ask For Help!</a></li>
               <li><a href="/">Contact</a></li>
-              <li><a href="/">SOS</a></li>
+              <li><a href="/agora">SOS</a></li>
               <li><a href="/">Logout</a></li>
             </div>
           </ul>
