@@ -3,11 +3,13 @@ const path = require('path');
 const bodyparser = require('body-parser')
 const morgan = require('morgan')
 const dotenv = require('dotenv')
-// const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 const passport = require('passport');
 const session = require('express-session')
 const cookieSession = require('cookie-session');
-// const connectDB = require('./config/db');
+const connectDB = require('./config/db');
+const MongoStore = require('connect-mongo')(session)
+const User = require('./model/User')
 
 
 const port = process.env.PORT || 3000;
@@ -16,13 +18,21 @@ const port = process.env.PORT || 3000;
 // require('dotenv').config()
 const app = express();
 
-// connectDB()
+connectDB()
 
 //Configure Session Storage
-app.use(cookieSession({
+ /*app.use(cookieSession({
     name: 'session-name',
-    keys: ['key1', 'key2']
-  }))
+    keys: ['key1', 'key2'],
+    // store: new MongoStore({ mongooseConnection: mongoose.connection })
+  })) */
+
+ app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false,
+    store: new MongoStore({ mongooseConnection: mongoose.connection })
+  })) 
 
 //passport config
 require('./passport')
@@ -54,6 +64,8 @@ app.get('', (req, res) => {
 
     res.render('login', params)
 })
+
+
 
 app.get('/failed', (req, res) => {
     res.send('<h1>Log in Failed :(</h1>')
