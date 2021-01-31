@@ -12,7 +12,7 @@ form {
   left: 1.5rem;
 }
 
-input[type="text"],
+/* input[type="text"],
 select {
   width: 15.6rem;
   padding: 12px 20px;
@@ -21,14 +21,14 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-}
+} */
 
 .navbar {
   height: 80vh;
   width: 250px;
-  background-color: #9287ded6;
+  background: #9a9898a6;
   transition: ease-in-out 0.5s;
-  box-shadow: 5px 2px 15px 1px #888;
+  box-shadow: 5px 2px 15px 1px rgba(136, 136, 136, 0.445);
 }
 
 .navbar ul img {
@@ -48,22 +48,15 @@ select {
   text-decoration: none;
   padding: 0 25px;
   width: 100%;
-  color: white;
+  color: hsla(0, 0%, 100%, 0.986);
   margin: 20px;
   font-size: 1.3rem;
   transition: all 0.8s;
 }
 
 .navbar li a:hover {
-  background: -webkit-linear-gradient(#bfc4df, #e99fe9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.navbar li a:active {
-  background: -webkit-linear-gradient(#4158d0, #c850c0, #ffcc70);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  color: black;
 }
 
 #nav-list {
@@ -80,6 +73,8 @@ select {
   position: absolute;
   top: -2.5rem;
   left: 1px;
+  cursor: pointer;
+  color: #b5b2b2;
 }
 
 .img_logo {
@@ -88,19 +83,19 @@ select {
 }
 
 #logo h3 {
-  background: -webkit-linear-gradient(#4158d0, #c850c0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: black;
   padding: 10px;
   letter-spacing: 2px;
-  position: absolute;
-  top: -3.5rem;
-  left: 3rem;
+
   font-weight: bold;
-  font-size: 35px;
+  font-size: 40px;
 }
 #logo h3 a {
   text-decoration: none;
+  color: black;
+  position: absolute;
+  top: -3.3rem;
+  left: 3rem;
 }
 
 .v-class {
@@ -175,20 +170,18 @@ body {
   top: 5rem;
   left: 1.5rem;
   width: 400px;
-  box-shadow: 0px 24px 74px 0px rgba(0, 0, 0, 0.32);
-  border: 1px solid #ccc;
+  box-shadow: 5px 2px 15px 1px rgba(136, 136, 136, 0.445);
+  width: 250px;
   overflow-y: hidden;
 }
 #search > .search-input-box {
-  background: #fff;
-  height: 72px;
+  background: #f2f2f2;
+  height: 35px;
   width: 100%;
+  border-radius: 20px;
 }
 #search > .search-input-box > .search-input-group {
-  position: relative;
-  top: 20px;
-  left: 20px;
-  width: 358px;
+  width: 250px;
   height: 30px;
   margin: 0;
   padding: 0;
@@ -215,6 +208,8 @@ body {
   padding: 0 5px;
   border-collapse: collapse;
   border: 0px;
+  border-radius: 30px;
+  background: #f2f2f2;
 }
 #search > .search-input-box > .search-input-group > input:focus {
   outline: none;

@@ -9,6 +9,19 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <meta
+      name="description"
+      content="This sample shows how to continuously get the users position information from the browser by using the HTML5 geolocation API and update it on a map."
+    />
+    <meta
+      name="keywords"
+      content="Microsoft maps, map, gis, API, SDK, geolocation, user, location, position, tracking, gps, gps tracking"
+    />
+    <meta name="author" content="Microsoft Azure Maps" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <link
       rel="stylesheet"
       href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css"
@@ -19,10 +32,45 @@
     <!-- Add a reference to the Azure Maps Services Module JavaScript file. -->
     <script src="https://atlas.microsoft.com/sdk/javascript/service/2/atlas-service.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
     <!-- <link rel="stylesheet" href="css/azmap.css" /> -->
   </head>
   <body onload="GetMap()">
     <div id="myMap"></div>
+    <div
+      style="
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+      "
+    >
+      <input
+        type="button"
+        value="Turn on Your location"
+        onclick="startTracking()"
+      />
+      <!-- <i class="fas fa-map-marker" onclick="startTracking()"></i> -->
+      <input
+        type="button"
+        value="Turn off your location"
+        onclick="stopTracking()"
+      />
+    </div>
+
+    <fieldset
+      style="width: calc(100% - 30px); min-width: 290px; margin-top: 10px"
+    >
+      <legend><h1 style="font-size: 16px">Know your location</h1></legend>
+      we are tracking
+    </fieldset>
     <div id="search_bar">
       <form>
         <!-- <input type="text" placeholder="Search for places" /> -->
@@ -45,7 +93,7 @@
               <li><a href="/">Ask For Help!</a></li>
               <li><a href="/">Contact</a></li>
               <li><a href="/">SOS</a></li>
-              <li><a href="/logout">Logout</a></li>
+              <li><a href="/">Logout</a></li>
             </div>
           </ul>
         </nav>
